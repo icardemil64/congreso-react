@@ -9,6 +9,7 @@
 
 .container h1 {
   margin-top: -2.5rem;
+  text-align: center;
 }
 
 .image {
@@ -32,3 +33,9 @@
   color: #222323;
   font-weight: bold;
 }
+
+@media (max-width: 650px) {
+  .image {
+    display: none;
+  }
+} ;

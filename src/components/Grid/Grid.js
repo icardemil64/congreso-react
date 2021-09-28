@@ -1,4 +1,7 @@
+import { useContext } from "react";
 import styled from "styled-components";
+
+import { GridContext } from "../../context/GridProvider";
 
 import Dot from "../Dot/Dot";
 
@@ -9,8 +12,9 @@ const GridStyle = styled.div`
   width: 30%;
 `;
 
-const Grid = (props) => {
-  const congressList = props.congressList;
+const Grid = () => {
+  const { congressList } = useContext(GridContext);
+
   return (
     <GridStyle>
       {congressList.map((e, index) => (

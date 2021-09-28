@@ -22,14 +22,14 @@ const Footer = () => {
   return (
     <FooterStyle>
       {" "}
-      Creado con la 🍐 agitada por
+      Creado por el votante
       <AnchorStyle
         href="https://twitter.com/icarde64"
         target="_blank"
         rel="noreferrer"
       >
         {" "}
-        @icarde64
+        @icarde64 🗳️
       </AnchorStyle>
     </FooterStyle>
   );

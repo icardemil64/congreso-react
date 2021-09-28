@@ -1,8 +1,7 @@
-import Button from "../UI/Button/Button";
-
 import image from "../../assets/image.png";
 import styles from "./Hero.module.css";
-import Footer from "../UI/Footer/Footer";
+import Footer from "../../components/UI/Footer/Footer";
+import ButtonLink from "../../components/UI/Button/ButtonLink";
 
 const Hero = () => {
   return (
@@ -13,8 +12,13 @@ const Hero = () => {
         src={image}
         alt="Logo congress builder"
       />
-      <h1>¡Crea y personaliza tus listas de reproducción!</h1>
-      <Button text="Comenzar" color="#222323" textColor="#ffffff" />
+      <h1>¡Proyecta tu propio parlamento!</h1>
+      <ButtonLink
+        url="/builder"
+        text="Comenzar"
+        color="#222323"
+        textColor="#ffffff"
+      />
       <Footer />
     </div>
   );

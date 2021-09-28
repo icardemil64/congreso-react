@@ -1,10 +1,11 @@
-import Main from "./pages/Main/Main";
+import GridProvider from "./context/GridProvider";
+import Main from "./router/Main/Main";
 
 function App() {
   return (
-    <>
+    <GridProvider>
       <Main />
-    </>
+    </GridProvider>
   );
 }
 

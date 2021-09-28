@@ -1,20 +1,19 @@
 import styled from "styled-components";
 
-const ButtonStyle = styled.a`
-  background-color: ${(props) => props.buttonColor || "black"};
-  color: ${(props) => props.textColor || "white"};
+const ButtonStyle = styled.button`
+  background-color: ${(props) => props.buttoncolor || "white"};
+  color: ${(props) => props.textcolor || "black"};
   border-radius: 8px;
+  border: 2px solid black;
   padding: 0.25rem 1rem;
-  width: 13rem;
+  width: ${(props) => props.widthbutton || "80%"};
   height: 3rem;
   font-size: 1.1rem;
   cursor: pointer;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   &:hover {
-    background-color: #505558;
+    color: #505558;
+    border: 2px solid #505558;
   }
 `;
 
@@ -22,8 +21,14 @@ const Button = (props) => {
   const text = props.text;
   const color = props.color;
   const textColor = props.textColor;
+  const width = props.width;
   return (
-    <ButtonStyle buttonColor={color} buttonText={textColor}>
+    <ButtonStyle
+      buttoncolor={color}
+      textcolor={textColor}
+      widthbutton={width}
+      onClick={props.onClick}
+    >
       {text}
     </ButtonStyle>
   );
