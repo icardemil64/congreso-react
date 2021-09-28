@@ -13,12 +13,11 @@ const GridStyle = styled.div`
 `;
 
 const Grid = () => {
-  const { congressList } = useContext(GridContext);
-
+  const { congressList, objectKeys } = useContext(GridContext);
   return (
     <GridStyle>
       {congressList.map((e, index) => (
-        <Dot key={index} dotColor={e.color} pacto={e.pacto} />
+        <Dot key={index} dotColor={e.color} titles={objectKeys} item={e} />
       ))}
     </GridStyle>
   );

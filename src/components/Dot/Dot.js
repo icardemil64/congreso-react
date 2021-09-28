@@ -11,11 +11,24 @@ const DotStyle = styled.div`
   display: inline-block;
 `;
 
+const Info = (props) => {
+  const titles = props.titles.slice(2);
+  const item = props.item;
+  return (
+    <>
+      {titles.map((e, index) => (
+        <div key={index}>{`${e.charAt(0).toUpperCase() + e.slice(1)}: ${
+          item[e]
+        }\n`}</div>
+      ))}
+    </>
+  );
+};
+
 const Dot = (props) => {
   const color = props.dotColor;
-  const pacto = props.pacto;
   return (
-    <Tippy content={<span>{pacto}</span>}>
+    <Tippy content={<Info item={props.item} titles={props.titles} />}>
       <DotStyle dotColor={color} />
     </Tippy>
   );

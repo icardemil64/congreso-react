@@ -4,7 +4,7 @@ const ButtonStyle = styled.button`
   background-color: ${(props) => props.buttoncolor || "white"};
   color: ${(props) => props.textcolor || "black"};
   border-radius: 8px;
-  border: 2px solid black;
+  border: 2px solid ${(props) => props.buttoncolor || "black"};
   padding: 0.25rem 1rem;
   width: ${(props) => props.widthbutton || "80%"};
   height: 3rem;

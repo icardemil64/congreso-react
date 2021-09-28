@@ -11,7 +11,7 @@ import Table from "../UI/Table/Table";
 import styles from "./Setup.module.css";
 
 const Setup = (props) => {
-  const { setCongressList } = useContext(GridContext);
+  const { setCongressList, setObjetctsKeys } = useContext(GridContext);
 
   let file = null;
   const handleChange = ({ target: { files } }) => {
@@ -26,6 +26,8 @@ const Setup = (props) => {
         header: true,
         skipEmptyLines: true,
         complete: function (results) {
+          const keyNames = Object.keys(results.data[0]);
+          setObjetctsKeys(keyNames);
           setCongressList(results.data);
         },
       });
