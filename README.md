@@ -21,13 +21,13 @@ Las tres primeras columnas son obligatorias, desde la cuarta se pueden agregar t
 - Papaparse
 - Wouter
 
-#### Instalación
+### Instalación
 
 ```javascript
 npm install
 ```
 
-#### Recursos
+### Recursos
 
 - [Open Peeps](https://www.openpeeps.com/)
 
